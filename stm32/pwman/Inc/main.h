@@ -49,6 +49,28 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define PW_EN_Pin GPIO_PIN_2
+#define PW_EN_GPIO_Port GPIOA
+#define CHARGE_LED_Pin GPIO_PIN_3
+#define CHARGE_LED_GPIO_Port GPIOA
+#define PW_ENB_Pin GPIO_PIN_4
+#define PW_ENB_GPIO_Port GPIOA
+#define PW_ENA_Pin GPIO_PIN_5
+#define PW_ENA_GPIO_Port GPIOA
+#define PW_BT_Pin GPIO_PIN_6
+#define PW_BT_GPIO_Port GPIOA
+#define PW_BT_EXTI_IRQn EXTI4_15_IRQn
+#define USER_BT_Pin GPIO_PIN_7
+#define USER_BT_GPIO_Port GPIOA
+#define CHARGE_INP_Pin GPIO_PIN_0
+#define CHARGE_INP_GPIO_Port GPIOB
+#define CHARGE_INP_EXTI_IRQn EXTI0_1_IRQn
+#define SMBC_Pin GPIO_PIN_13
+#define SMBC_GPIO_Port GPIOB
+#define SMBD_Pin GPIO_PIN_14
+#define SMBD_GPIO_Port GPIOB
+#define USER_LED_Pin GPIO_PIN_4
+#define USER_LED_GPIO_Port GPIOB
 #define SCL_Pin GPIO_PIN_6
 #define SCL_GPIO_Port GPIOB
 #define SDA_Pin GPIO_PIN_7
