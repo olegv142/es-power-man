@@ -30,6 +30,18 @@ static inline void query_batt_info(struct batt_info * batt)
 	READ_BATT(0x54, batt->opst);    // operation status bits
 }
 
+// MAC commands
+#define MAC_SHTDN 0x10
+#define MAC_SLEEP 0x11
+
+static inline void send_mac_cmd(uint8_t cmd)
+{
+	uint8_t command[] = { cmd, 0 };
+	if (HAL_OK != HAL_I2C_Mem_Write(&hi2c2, I2C_ADDR, 0, 1, command, sizeof(command), I2C_TOUT)) {
+		_Error_Handler(__FILE__, __LINE__);
+	}
+}
+
 #define BATT_INFO_POLL_DELAY 1000
 
 // The routine called from the main application loop
