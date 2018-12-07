@@ -28,6 +28,7 @@ static inline void query_batt_info(struct batt_info * batt)
 	READ_BATT(0x3e, batt->cell[1]); // cell voltage in mV
 	READ_BATT(0x3d, batt->cell[2]); // cell voltage in mV
 	READ_BATT(0x54, batt->opst);    // operation status bits
+	READ_BATT(0x55, batt->chgst);   // charging status bits
 }
 
 // MAC commands
